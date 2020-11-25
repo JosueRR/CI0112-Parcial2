@@ -13,6 +13,9 @@ public class Estudiante {
     private ListaNotas notas;
     private float promedio;
     private Estudiante siguiente;
+    //Variables tipo Estudiante para el arbol
+    Estudiante hijoIzquierdo;
+    Estudiante hijoDerecho;
 
     /**
      * Constructor de la clase  
@@ -23,6 +26,8 @@ public class Estudiante {
         this.notas = null;
         this.promedio = 0;
         this.siguiente = null;
+        hijoIzquierdo = null;
+        hijoDerecho = null;
     }
     
     //Setters y getters de nombre
@@ -68,5 +73,22 @@ public class Estudiante {
     
     public void setSiguiente(Estudiante siguiente) {
         this.siguiente = siguiente;
+    }
+    
+    //Setters y getters de los hijos del arbol
+    public Estudiante getHijoIzquierdo() {
+        return hijoIzquierdo;
+    }
+    
+    public void setHijoIzquierdo(Estudiante nuevoNodo) {
+        hijoIzquierdo = nuevoNodo;
+    }
+
+    public Estudiante getHijoDerecho() {
+        return hijoDerecho;
+    }
+    
+    public void setHijoDerecho(Estudiante nuevoNodo) {
+        hijoDerecho = nuevoNodo;
     }
 }
