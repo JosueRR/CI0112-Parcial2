@@ -62,6 +62,6 @@ public class Main {
             }
         }  
         listaEstudiantesString = listaEstudiantes.toString(listaEstudiantes);
-        System.out.println(listaEstudiantesString);
+        JOptionPane.showMessageDialog(null,listaEstudiantesString);
     }
 }
