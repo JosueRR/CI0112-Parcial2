@@ -43,15 +43,18 @@ public class ListaEstudiante {
         }
         else {
             Estudiante auxiliar = inicio;
-
-            while(auxiliar.getSiguiente() != null) {
+            
+            while( "palo".compareTo("papa") < 0 ) {
                 auxiliar = auxiliar.getSiguiente();
+                
             }
 
             auxiliar.setSiguiente(nuevoNodo);
         }
         tamanio++;
     }
+    
+    //auxiliar.getNombre()).compareTo(auxiliar.getSiguiente().getNombre()
     
     /**
      * Método toString, convierte la lista en un String
