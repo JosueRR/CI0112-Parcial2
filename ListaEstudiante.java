@@ -44,8 +44,8 @@ public class ListaEstudiante {
         }
         else {
             if (nuevoNodo.getNombre().compareTo(auxiliar.getNombre()) < 0 ) {
-                nuevoNodo.setSiguiente(auxiliar.getSiguiente());
-                auxiliar.setSiguiente(nuevoNodo);
+                nuevoNodo.setSiguiente(inicio);
+                inicio = nuevoNodo;
             }
             else {
                 while(auxiliar.getSiguiente() != null) {
