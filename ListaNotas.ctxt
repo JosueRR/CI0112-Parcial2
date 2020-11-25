@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=ListaNotas
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ ListaNotas\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ Lista()
+comment1.text=\r\n\ Constructor\ de\ la\ clase\r\n
+comment2.params=
+comment2.target=boolean\ esVacia()
+comment3.params=
+comment3.target=int\ getTamanio()
+comment4.params=notaMateria
+comment4.target=void\ agregarNota(float)
+comment4.text=\r\n\ M\u00E9todo\ que\ agrega\ notas\ a\ la\ lista\ (funciona\ como\ una\ cola)\r\n
+comment5.params=auxiliar
+comment5.target=float\ calcularPromedioRecursivo(NodoNotas)
+comment5.text=\r\n\ M\u00E9todo\ que\ calcula\ un\ promedio\ de\ notas\ de\ un\ lista\ de\ notas\ de\ forma\ recursiva\r\n
+comment6.params=
+comment6.target=float\ retornarPromedio()
+comment6.text=\r\n\ M\u00E9todo\ que\ retornar\ el\ promedio\r\n
+numComments=7

@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=NodoNotas
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ NodoNotas\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ Nodo()
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ \ \r\n
+comment2.params=
+comment2.target=float\ getNotaMateria()
+comment3.params=notaMateria
+comment3.target=void\ setNotaMateria(float)
+comment4.params=
+comment4.target=NodoNotas\ getSiguiente()
+comment5.params=siguiente
+comment5.target=void\ setSiguiente(NodoNotas)
+numComments=6

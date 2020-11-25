@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Estudiante
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Estudiantes\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ Estudiante()
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ \ \r\n
+comment10.params=
+comment10.target=Estudiante\ getSiguiente()
+comment11.params=siguiente
+comment11.target=void\ setSiguiente(Estudiante)
+comment2.params=
+comment2.target=java.lang.String\ getNombre()
+comment3.params=nombre
+comment3.target=void\ setNombre(java.lang.String)
+comment4.params=
+comment4.target=int\ getCarnet()
+comment5.params=carnet
+comment5.target=void\ setCarnet(int)
+comment6.params=
+comment6.target=ListaNotas\ getNotas()
+comment7.params=notas
+comment7.target=void\ setNotas(ListaNotas)
+comment8.params=
+comment8.target=float\ getPromedio()
+comment9.params=promedio
+comment9.target=void\ setPromedio(float)
+numComments=12
