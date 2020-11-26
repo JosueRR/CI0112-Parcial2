@@ -1,17 +1,18 @@
 
 /**
- * Write a description of class ListaEstudiante here.
+ * Clase ListaEstudiante: contiene una lista enlazada de un objeto tipo Estudiante.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Josué Retana Rodríguez - C06440 
+ * @version 25/11/2020
  */
+
 public class ListaEstudiante {
-    //Variables de la lista de tipo estudiantes
+    //Atributos de la lista de tipo estudiantes
     private Estudiante inicio;
     private int tamanio;
 
     /**
-     * Constructor de la clase
+     * Constructor de la clase sin parámetros
      */
     public void Lista() {
         inicio = null;
@@ -43,17 +44,20 @@ public class ListaEstudiante {
         nuevoNodo.setCarnet(carnet);
         nuevoNodo.setNotas(notas);
         nuevoNodo.setPromedio(promedio);
-
+        
+        //En caso de ser el primer nodo
         if(esVacia()) {
             inicio = nuevoNodo;
         }
         else {
+            //En caso de que solo haya un nodo en la lista y se debe realizar el movimiento
             if (nuevoNodo.getNombre().compareTo(auxiliar.getNombre()) <= 0 ) {
                 nuevoNodo.setSiguiente(inicio);
                 inicio = nuevoNodo;
             }
             else {
                 while(auxiliar.getSiguiente() != null) {
+                    //En caso de que el cambio se deba realizar en mitad de la lista
                     if (nuevoNodo.getNombre().compareTo(auxiliar.getNombre()) <= 0 ) {
                         nuevoNodo.setSiguiente(auxiliar.getSiguiente());
                         auxiliar.setSiguiente(nuevoNodo);
@@ -62,7 +66,7 @@ public class ListaEstudiante {
                     auxiliar = auxiliar.getSiguiente();
                 }
 
-                
+                //En caso de terner que agregarlo al final
                 auxiliar.setSiguiente(nuevoNodo);
             }
         }
@@ -75,7 +79,8 @@ public class ListaEstudiante {
     public String toString(ListaEstudiante listaEstudiantes) {
         String listaEstudiantesString = "";
         Estudiante auxiliar = inicio;
-
+        
+        //Ciclo que repite según el tamaño de la lista
         for (int posicion = 0; posicion < listaEstudiantes.getTamanio() ; posicion++) {
             listaEstudiantesString += "Estudiante: " + auxiliar.getNombre() + "\n";
             listaEstudiantesString += "Carnet: " + auxiliar.getCarnet() + "\n";

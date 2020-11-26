@@ -1,24 +1,24 @@
 
 /**
- * Write a description of class Estudiantes here.
+ * Clase Estudiante: contiene un objeto tipo estudiante. Funciona como nodo para listas y arboles.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Josué Retana Rodríguez - C06440 
+ * @version 25/11/2020
  */
 
 public class Estudiante {
-    //Variables del objeto tipo estudiante
+    //Atributos del objeto tipo estudiante
     private String nombre;
     private int carnet;
     private ListaNotas notas;
     private float promedio;
     private Estudiante siguiente;
-    //Variables tipo Estudiante para el arbol
+    //Hijos tipo Estudiante para el arbol
     Estudiante hijoIzquierdo;
     Estudiante hijoDerecho;
 
     /**
-     * Constructor de la clase  
+     * Constructor de la clase (caso sin parámetros)  
      */
     public Estudiante() {
         this.nombre = "";
@@ -31,7 +31,7 @@ public class Estudiante {
     }
     
     /**
-     * Constructor de la clase caso con parámetros 
+     * Constructor de la clase (caso con parámetros) 
      */
     public Estudiante(String nombre, int carnet, ListaNotas notas, float promedio) {
         this.nombre = nombre;

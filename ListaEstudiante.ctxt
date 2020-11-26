@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=ListaEstudiante
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ ListaEstudiante\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Clase\ ListaEstudiante\:\ contiene\ una\ lista\ enlazada\ de\ un\ objeto\ tipo\ Estudiante.\r\n\ \r\n\ @author\ Josu\u00E9\ Retana\ Rodr\u00EDguez\ -\ C06440\ \r\n\ @version\ 25/11/2020\r\n
 comment1.params=
 comment1.target=void\ Lista()
-comment1.text=\r\n\ Constructor\ de\ la\ clase\r\n
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ sin\ par\u00E1metros\r\n
 comment2.params=
 comment2.target=boolean\ esVacia()
 comment3.params=

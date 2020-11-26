@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=NodoNotas
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ NodoNotas\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Clase\ NodoNotas\:\ contiene\ los\ atributos\ del\ nodo\ de\ la\ lista\ de\ tipo\ notas.\r\n\ \r\n\ @author\ Josu\u00E9\ Retana\ Rodr\u00EDguez\ -\ C06440\ \r\n\ @version\ 25/11/2020\r\n
 comment1.params=
 comment1.target=void\ Nodo()
 comment1.text=\r\n\ Constructor\ de\ la\ clase\ \ \r\n

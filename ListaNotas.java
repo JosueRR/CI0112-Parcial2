@@ -1,13 +1,13 @@
 
 /**
- * Write a description of class ListaNotas here.
+ * Clase ListaNotas: contiene una lista enlazada de un objeto tipo notas.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Josué Retana Rodríguez - C06440 
+ * @version 25/11/2020
  */
 
 public class ListaNotas {
-    //Variables de la lista de tipo notas
+    //Atributos de la lista tipo notas
     private NodoNotas inicio;
     private int tamanio;
     float sumaNotas = 0;
@@ -22,12 +22,16 @@ public class ListaNotas {
         tamanio = 0;
     }
 
-    //Método de tipo boolean que indica si la lista se enceuntra vacía o no
+    /**
+     * Método de tipo boolean que indica si la lista se enceuntra vacía o no
+     */
     public boolean esVacia() {
         return inicio == null;
     }
 
-    //Método de tipo int que indica el tamaño de la lista
+    /**
+     * Método de tipo int que indica el tamaño de la lista
+     */
     public int getTamanio() {
         return tamanio;
     }
@@ -74,7 +78,7 @@ public class ListaNotas {
     }
     
     /**
-     * Método que retornar el promedio
+     * Método que retornar un promedio de un grupo de notas
      */
     public float retornarPromedio() {
         NodoNotas auxiliar = inicio;

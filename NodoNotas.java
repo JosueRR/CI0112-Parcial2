@@ -1,13 +1,13 @@
 
 /**
- * Write a description of class NodoNotas here.
+ * Clase NodoNotas: contiene los atributos del nodo de la lista de tipo notas.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Josué Retana Rodríguez - C06440 
+ * @version 25/11/2020
  */
 
 public class NodoNotas {
-    //Variables del objeto nodo notas
+    //Atributos del nodo notas
     private float notaMateria;
     private NodoNotas siguiente;
 

@@ -1,13 +1,16 @@
 #BlueJ class context
 comment0.target=Arbol
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Arbol\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Clase\ Arbol\:\ contiene\ un\ arbol\ binario,\ de\ tipo\ Estudiante.\ Contiene\ atributos\ y\ funciones\ relacionadas\r\n\ \r\n\ @author\ Josu\u00E9\ Retana\ Rodr\u00EDguez\ -\ C06440\ \r\n\ @version\ 25/11/2020\r\n
 comment1.params=
 comment1.target=Arbol()
 comment1.text=\r\n\ Constructor\ de\ la\ clase\r\n
 comment2.params=
 comment2.target=Estudiante\ getRaiz()
+comment2.text=\r\n\ Getter\ de\ la\ raiz\ del\ arbol\r\n
 comment3.params=actual\ estudiante
 comment3.target=Estudiante\ agregarRecursivo(Estudiante,\ Estudiante)
+comment3.text=\r\n\ M\u00E9todo\ que\ agrega\ de\ forma\ recursiva\ un\ estudiante\ a\ un\ hijo\ seg\u00FAn\ el\ caso\r\n
 comment4.params=estudiante
 comment4.target=void\ agregarHijo(Estudiante)
+comment4.text=\r\n\ M\u00E9todo\ que\ se\ encarga\ de\ crear/actualizar\ la\ raiz\ del\ arbol\ \r\n\ Realiza\ un\ llamado\ al\ m\u00E9todo\ recursivo\ anterior\r\n
 numComments=5

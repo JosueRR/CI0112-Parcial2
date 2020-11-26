@@ -1,10 +1,11 @@
 #BlueJ class context
-comment0.target=Main
+comment0.target=GrupoMain
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
+comment1.text=\r\n\ Clase\ Main\ del\ protoyecto\r\n
 comment2.params=listaEstudiantes
 comment2.target=void\ crearArbol(ListaEstudiante)
-comment2.text=\r\n\ M\u00E9todo\ que\ crea\ un\ arbol\ con\ base\ a\ una\ lista\r\n
+comment2.text=\r\n\ M\u00E9todo\ que\ crea\ un\ arbol\ con\ base\ a\ una\ lista\ de\ estudiantes\r\n\ El\ arbol\ se\ organiza\ de\ menor\ a\ mayor\r\n
 comment3.params=promedio\ nodoActual
 comment3.target=java.lang.String\ imprimirMenores(float,\ Estudiante)
 comment3.text=\r\n\ M\u00E9todo\ \ recibe\ un\ promedio\ e\ imprime\ los\ datos\ de\ los\ Estudiantes\ que\ tienen\ un\ promedio\ menor\ al\r\n\ indicado\r\n

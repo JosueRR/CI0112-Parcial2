@@ -1,13 +1,15 @@
 #BlueJ class context
 comment0.target=ListaNotas
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ ListaNotas\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Clase\ ListaNotas\:\ contiene\ una\ lista\ enlazada\ de\ un\ objeto\ tipo\ notas.\r\n\ \r\n\ @author\ Josu\u00E9\ Retana\ Rodr\u00EDguez\ -\ C06440\ \r\n\ @version\ 25/11/2020\r\n
 comment1.params=
 comment1.target=void\ Lista()
 comment1.text=\r\n\ Constructor\ de\ la\ clase\r\n
 comment2.params=
 comment2.target=boolean\ esVacia()
+comment2.text=\r\n\ M\u00E9todo\ de\ tipo\ boolean\ que\ indica\ si\ la\ lista\ se\ enceuntra\ vac\u00EDa\ o\ no\r\n
 comment3.params=
 comment3.target=int\ getTamanio()
+comment3.text=\r\n\ M\u00E9todo\ de\ tipo\ int\ que\ indica\ el\ tama\u00F1o\ de\ la\ lista\r\n
 comment4.params=notaMateria
 comment4.target=void\ agregarNota(float)
 comment4.text=\r\n\ M\u00E9todo\ que\ agrega\ notas\ a\ la\ lista\ (funciona\ como\ una\ cola)\r\n
@@ -16,5 +18,5 @@ comment5.target=float\ calcularPromedioRecursivo(NodoNotas)
 comment5.text=\r\n\ M\u00E9todo\ que\ calcula\ un\ promedio\ de\ notas\ de\ un\ lista\ de\ notas\ de\ forma\ recursiva\r\n
 comment6.params=
 comment6.target=float\ retornarPromedio()
-comment6.text=\r\n\ M\u00E9todo\ que\ retornar\ el\ promedio\r\n
+comment6.text=\r\n\ M\u00E9todo\ que\ retornar\ un\ promedio\ de\ un\ grupo\ de\ notas\r\n
 numComments=7
