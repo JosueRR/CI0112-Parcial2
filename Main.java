@@ -22,6 +22,7 @@ public class Main {
         String nombreEstudiante;
         int carnetEstudiante;
         float notasEstudiante;
+        float entradaPromedio;
 
         //Ciclo que se repite hasta que el usuario decida no ingresar más alumnos
         while (! "b".equals (entrada)){
@@ -63,17 +64,50 @@ public class Main {
                 JOptionPane.showMessageDialog(null,"No serán añadidos más estudiantes");
                 break;
             }
-        }  
+        }
+        //Se muestra la lista ingresada al usuario y se crea el arbol binario
         listaEstudiantesString = listaEstudiantes.toString(listaEstudiantes);
-        JOptionPane.showMessageDialog(null,listaEstudiantesString);
-
+        JOptionPane.showMessageDialog(null,"LISTA INGRESADA\n"
+            + listaEstudiantesString);
         crearArbol(listaEstudiantes);
-        //arbolBinario.recorrerEnOrden(arbolBinario.getRaiz());
-        imprimirMenores(7, arbolBinario.getRaiz());
+
+        //Condicional que se repite hasta que usuario desee salir del programa                                       
+        while (! "s".equals (entrada)) {
+            entrada= JOptionPane.showInputDialog ( "¿Qué desea hacer?\n"               
+                + "a. Mostrar todos los estudiantes que tengan un promedio mayor al ingresado.\n"
+                + "b. Mostrar todos los estudiantes que tengan un promedio menor al ingresado.\n"
+                + "c. Mostrar todos los estudiantes que tengan un promedio igual al ingresado. \n"
+                + "d. Mostrar todos los estudiantes con su promedio."
+                + "s. Salir.\n");
+            switch (entrada.toLowerCase()) {
+                case "a":
+                entradaPromedio = Float.parseFloat(JOptionPane.showInputDialog("Digite el promedio que desea utilizar"));
+                imprimirMayores(entradaPromedio, arbolBinario.getRaiz());
+                break;
+                
+                case "b":
+                entradaPromedio = Float.parseFloat(JOptionPane.showInputDialog("Digite el promedio que desea utilizar"));
+                imprimirMenores(entradaPromedio, arbolBinario.getRaiz());
+                break;
+                
+                case "c":
+                entradaPromedio = Float.parseFloat(JOptionPane.showInputDialog("Digite el promedio que desea utilizar"));
+                imprimirIguales(entradaPromedio, arbolBinario.getRaiz());
+                break;
+                
+                case "d":
+                imprimirTodos(arbolBinario.getRaiz());
+                break;
+                
+                case "s":
+                JOptionPane.showMessageDialog(null,"¡Gracias por utilizar el programa!");
+                break;        
+            }    
+        }
     }
 
     /**
-     * Método qeu crea un arbol con base a una lista
+     * Método que crea un arbol con base a una lista
      */
     public static void crearArbol(ListaEstudiante listaEstudiantes) {
         Estudiante auxiliar = listaEstudiantes.getInicio();
@@ -92,7 +126,7 @@ public class Main {
             imprimirMenores(promedio, nodoActual.getHijoIzquierdo());
             if (nodoActual.getPromedio() < promedio) {
                 System.out.println("El nombre es: " + nodoActual.getNombre() 
-                + " y el promedio corresponde a: " + nodoActual.getPromedio());
+                    + " y el promedio corresponde a: " + nodoActual.getPromedio());
             }
             imprimirMenores(promedio, nodoActual.getHijoDerecho());
         }
@@ -104,12 +138,12 @@ public class Main {
      */
     public static void imprimirIguales(float promedio, Estudiante nodoActual) {
         if( nodoActual != null) {
-            imprimirMenores(promedio, nodoActual.getHijoIzquierdo());
+            imprimirIguales(promedio, nodoActual.getHijoIzquierdo());
             if (nodoActual.getPromedio() == promedio) {
                 System.out.println("El nombre es: " + nodoActual.getNombre() 
-                + " y el promedio corresponde a: " + nodoActual.getPromedio());
+                    + " y el promedio corresponde a: " + nodoActual.getPromedio());
             }
-            imprimirMenores(promedio, nodoActual.getHijoDerecho());
+            imprimirIguales(promedio, nodoActual.getHijoDerecho());
         }
     }
 
@@ -119,12 +153,24 @@ public class Main {
      */
     public static void  imprimirMayores(float promedio, Estudiante nodoActual) {
         if( nodoActual != null) {
-            imprimirMenores(promedio, nodoActual.getHijoIzquierdo());
+            imprimirMayores(promedio, nodoActual.getHijoIzquierdo());
             if (nodoActual.getPromedio() > promedio) {
                 System.out.println("El nombre es: " + nodoActual.getNombre() 
-                + " y el promedio corresponde a: " + nodoActual.getPromedio());
+                    + " y el promedio corresponde a: " + nodoActual.getPromedio());
             }
-            imprimirMenores(promedio, nodoActual.getHijoDerecho());
+            imprimirMayores(promedio, nodoActual.getHijoDerecho());
+        }
+    }
+
+    /**
+     * Método que imprime todos los promedios con sus respectivos estudiantes
+     */
+    public static void imprimirTodos(Estudiante nodoActual) {
+        if( nodoActual != null) {
+            imprimirTodos(nodoActual.getHijoIzquierdo());
+            System.out.println("El nombre es: " + nodoActual.getNombre() 
+                + " y el promedio corresponde a: " + nodoActual.getPromedio());
+            imprimirTodos(nodoActual.getHijoDerecho());
         }
     }
 }
