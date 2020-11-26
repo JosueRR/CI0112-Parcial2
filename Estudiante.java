@@ -20,11 +20,24 @@ public class Estudiante {
     /**
      * Constructor de la clase  
      */
-    public void Estudiante(){
+    public Estudiante() {
         this.nombre = "";
         this.carnet = 000;
         this.notas = null;
         this.promedio = 0;
+        this.siguiente = null;
+        hijoIzquierdo = null;
+        hijoDerecho = null;
+    }
+    
+    /**
+     * Constructor de la clase caso con parámetros 
+     */
+    public Estudiante(String nombre, int carnet, ListaNotas notas, float promedio) {
+        this.nombre = nombre;
+        this.carnet = carnet;
+        this.notas = notas;
+        this.promedio = promedio;
         this.siguiente = null;
         hijoIzquierdo = null;
         hijoDerecho = null;

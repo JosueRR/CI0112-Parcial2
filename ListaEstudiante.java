@@ -27,6 +27,11 @@ public class ListaEstudiante {
     public int getTamanio() {
         return tamanio;
     }
+    
+    //Método que retorna el inico de una lista
+    public Estudiante getInicio() {
+        return inicio;
+    }
 
     /**
      * Método que agrega estudiantes a la lista (alfabéticamente)

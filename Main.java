@@ -9,9 +9,12 @@
 import javax.swing.JOptionPane;
 
 public class Main {
+    
+    static ListaNotas listaNotas = new ListaNotas();
+    static ListaEstudiante listaEstudiantes = new ListaEstudiante();
+    static Arbol arbolBinario = new Arbol();
+    
     public static void main (String args[]) {
-        ListaNotas listaNotas = new ListaNotas();
-        ListaEstudiante listaEstudiantes = new ListaEstudiante();
 
         float promedio;
         String listaEstudiantesString;
@@ -63,5 +66,20 @@ public class Main {
         }  
         listaEstudiantesString = listaEstudiantes.toString(listaEstudiantes);
         JOptionPane.showMessageDialog(null,listaEstudiantesString);
+
+        crearArbol(listaEstudiantes);
+        arbolBinario.recorrerEnOrden(arbolBinario.getRaiz());
+    }
+
+    /**
+     * Método qeu crea un arbol con base a una lista
+     */
+    public static void crearArbol(ListaEstudiante listaEstudiantes) {
+        Estudiante auxiliar = listaEstudiantes.getInicio();
+        System.out.println("El inico es: " + listaEstudiantes.getInicio().getNombre());
+        for (int posicion = 0; posicion < listaEstudiantes.getTamanio(); posicion++ ) {
+            arbolBinario.agregarHijo(auxiliar);
+            auxiliar = auxiliar.getSiguiente();
+        }
     }
 }
