@@ -40,4 +40,5 @@ public class Arbol {
     public void agregarHijo(Estudiante estudiante) {
         raiz = agregarRecursivo(raiz, estudiante);
     }
+
 }
