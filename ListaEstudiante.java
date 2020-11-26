@@ -48,13 +48,13 @@ public class ListaEstudiante {
             inicio = nuevoNodo;
         }
         else {
-            if (nuevoNodo.getNombre().compareTo(auxiliar.getNombre()) < 0 ) {
+            if (nuevoNodo.getNombre().compareTo(auxiliar.getNombre()) <= 0 ) {
                 nuevoNodo.setSiguiente(inicio);
                 inicio = nuevoNodo;
             }
             else {
                 while(auxiliar.getSiguiente() != null) {
-                    if (nuevoNodo.getNombre().compareTo(auxiliar.getNombre()) < 0 ) {
+                    if (nuevoNodo.getNombre().compareTo(auxiliar.getNombre()) <= 0 ) {
                         nuevoNodo.setSiguiente(auxiliar.getSiguiente());
                         auxiliar.setSiguiente(nuevoNodo);
                         break;
@@ -62,7 +62,7 @@ public class ListaEstudiante {
                     auxiliar = auxiliar.getSiguiente();
                 }
 
-                nuevoNodo.setSiguiente(auxiliar.getSiguiente());
+                
                 auxiliar.setSiguiente(nuevoNodo);
             }
         }

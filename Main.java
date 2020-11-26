@@ -13,11 +13,13 @@ public class Main {
     static ListaNotas listaNotas = new ListaNotas();
     static ListaEstudiante listaEstudiantes = new ListaEstudiante();
     static Arbol arbolBinario = new Arbol();
+    static String listaEstudiantesFiltrados;
 
     public static void main (String args[]) {
 
         float promedio;
         String listaEstudiantesString;
+
         String entrada = "";
         String nombreEstudiante;
         int carnetEstudiante;
@@ -77,26 +79,55 @@ public class Main {
                 + "a. Mostrar todos los estudiantes que tengan un promedio mayor al ingresado.\n"
                 + "b. Mostrar todos los estudiantes que tengan un promedio menor al ingresado.\n"
                 + "c. Mostrar todos los estudiantes que tengan un promedio igual al ingresado. \n"
-                + "d. Mostrar todos los estudiantes con su promedio."
+                + "d. Mostrar todos los estudiantes con su promedio. \n"
                 + "s. Salir.\n");
             switch (entrada.toLowerCase()) {
                 case "a":
+
+                listaEstudiantesFiltrados = "";
                 entradaPromedio = Float.parseFloat(JOptionPane.showInputDialog("Digite el promedio que desea utilizar"));
-                imprimirMayores(entradaPromedio, arbolBinario.getRaiz());
+                listaEstudiantesFiltrados = imprimirMayores(entradaPromedio, arbolBinario.getRaiz());
+                if (listaEstudiantesFiltrados == "") {
+                    JOptionPane.showMessageDialog(null,"No hay concidencias");
+                }
+                else {
+                    JOptionPane.showMessageDialog(null,listaEstudiantesFiltrados);
+                }
                 break;
-                
+
                 case "b":
+                listaEstudiantesFiltrados = "";
                 entradaPromedio = Float.parseFloat(JOptionPane.showInputDialog("Digite el promedio que desea utilizar"));
-                imprimirMenores(entradaPromedio, arbolBinario.getRaiz());
+                listaEstudiantesFiltrados = imprimirMenores(entradaPromedio, arbolBinario.getRaiz());
+                if (listaEstudiantesFiltrados == "") {
+                    JOptionPane.showMessageDialog(null,"No hay concidencias");
+                }
+                else {
+                    JOptionPane.showMessageDialog(null,listaEstudiantesFiltrados);
+                }
                 break;
-                
+
                 case "c":
+                listaEstudiantesFiltrados = "";
                 entradaPromedio = Float.parseFloat(JOptionPane.showInputDialog("Digite el promedio que desea utilizar"));
-                imprimirIguales(entradaPromedio, arbolBinario.getRaiz());
+                listaEstudiantesFiltrados = imprimirIguales(entradaPromedio, arbolBinario.getRaiz());
+                if (listaEstudiantesFiltrados == "") {
+                    JOptionPane.showMessageDialog(null,"No hay concidencias");
+                }
+                else {
+                    JOptionPane.showMessageDialog(null,listaEstudiantesFiltrados);
+                }
                 break;
-                
+
                 case "d":
-                imprimirTodos(arbolBinario.getRaiz());
+                listaEstudiantesFiltrados = "";
+                listaEstudiantesFiltrados = imprimirTodos(arbolBinario.getRaiz());
+                if (listaEstudiantesFiltrados == "") {
+                    JOptionPane.showMessageDialog(null,"No hay concidencias");
+                }
+                else {
+                    JOptionPane.showMessageDialog(null,listaEstudiantesFiltrados);
+                }
                 break;
                 
                 case "s":
@@ -121,56 +152,63 @@ public class Main {
      * Método  recibe un promedio e imprime los datos de los Estudiantes que tienen un promedio menor al
      * indicado
      */
-    public static void imprimirMenores(float promedio, Estudiante nodoActual) {
-        if( nodoActual != null) {
+    public static String imprimirMenores(float promedio, Estudiante nodoActual) {
+        if(nodoActual != null) {
             imprimirMenores(promedio, nodoActual.getHijoIzquierdo());
             if (nodoActual.getPromedio() < promedio) {
-                System.out.println("El nombre es: " + nodoActual.getNombre() 
-                    + " y el promedio corresponde a: " + nodoActual.getPromedio());
+                listaEstudiantesFiltrados += "El nombre es: " + nodoActual.getNombre() 
+                + " y el promedio corresponde a: " + nodoActual.getPromedio() + "\n";
             }
             imprimirMenores(promedio, nodoActual.getHijoDerecho());
+            return listaEstudiantesFiltrados;
         }
+        return listaEstudiantesFiltrados;
     }
 
     /**
      * Método que recibe un promedio e imprime los datos de los Estudiantes que tienen un promedio igual al
      * indicado
      */
-    public static void imprimirIguales(float promedio, Estudiante nodoActual) {
+    public static String imprimirIguales(float promedio, Estudiante nodoActual) {
         if( nodoActual != null) {
             imprimirIguales(promedio, nodoActual.getHijoIzquierdo());
             if (nodoActual.getPromedio() == promedio) {
-                System.out.println("El nombre es: " + nodoActual.getNombre() 
-                    + " y el promedio corresponde a: " + nodoActual.getPromedio());
+                listaEstudiantesFiltrados += "El nombre es: " + nodoActual.getNombre() 
+                + " y el promedio corresponde a: " + nodoActual.getPromedio() + "\n";
             }
             imprimirIguales(promedio, nodoActual.getHijoDerecho());
+            return listaEstudiantesFiltrados;
         }
+        return listaEstudiantesFiltrados;
     }
 
     /**
      * Método recibe un promedio e imprime los datos de los Estudiantes que tienen un promedio mayor al
      * indicado
      */
-    public static void  imprimirMayores(float promedio, Estudiante nodoActual) {
+    public static String  imprimirMayores(float promedio, Estudiante nodoActual) {
         if( nodoActual != null) {
             imprimirMayores(promedio, nodoActual.getHijoIzquierdo());
             if (nodoActual.getPromedio() > promedio) {
-                System.out.println("El nombre es: " + nodoActual.getNombre() 
-                    + " y el promedio corresponde a: " + nodoActual.getPromedio());
+                listaEstudiantesFiltrados += "El nombre es: " + nodoActual.getNombre() 
+                + " y el promedio corresponde a: " + nodoActual.getPromedio() + "\n";
             }
             imprimirMayores(promedio, nodoActual.getHijoDerecho());
+            return listaEstudiantesFiltrados;
         }
+        return listaEstudiantesFiltrados;
     }
 
     /**
      * Método que imprime todos los promedios con sus respectivos estudiantes
      */
-    public static void imprimirTodos(Estudiante nodoActual) {
+    public static String imprimirTodos(Estudiante nodoActual) {
         if( nodoActual != null) {
             imprimirTodos(nodoActual.getHijoIzquierdo());
-            System.out.println("El nombre es: " + nodoActual.getNombre() 
-                + " y el promedio corresponde a: " + nodoActual.getPromedio());
+            listaEstudiantesFiltrados += "El nombre es: " + nodoActual.getNombre() 
+            + " y el promedio corresponde a: " + nodoActual.getPromedio() + "\n";
             imprimirTodos(nodoActual.getHijoDerecho());
         }
+        return listaEstudiantesFiltrados;
     }
 }
