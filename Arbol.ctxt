@@ -10,6 +10,4 @@ comment3.params=actual\ estudiante
 comment3.target=Estudiante\ agregarRecursivo(Estudiante,\ Estudiante)
 comment4.params=estudiante
 comment4.target=void\ agregarHijo(Estudiante)
-comment5.params=nodoActual
-comment5.target=void\ recorrerEnOrden(Estudiante)
-numComments=6
+numComments=5

@@ -9,11 +9,11 @@
 import javax.swing.JOptionPane;
 
 public class Main {
-    
+
     static ListaNotas listaNotas = new ListaNotas();
     static ListaEstudiante listaEstudiantes = new ListaEstudiante();
     static Arbol arbolBinario = new Arbol();
-    
+
     public static void main (String args[]) {
 
         float promedio;
@@ -68,7 +68,8 @@ public class Main {
         JOptionPane.showMessageDialog(null,listaEstudiantesString);
 
         crearArbol(listaEstudiantes);
-        arbolBinario.recorrerEnOrden(arbolBinario.getRaiz());
+        //arbolBinario.recorrerEnOrden(arbolBinario.getRaiz());
+        imprimirMenores(1, arbolBinario.getRaiz(), arbolBinario);
     }
 
     /**
@@ -81,5 +82,33 @@ public class Main {
             arbolBinario.agregarHijo(auxiliar);
             auxiliar = auxiliar.getSiguiente();
         }
+    }
+
+    /**
+     * Método  recibe un promedio e imprime los datos de los Estudiantes que tienen un promedio menor al
+     * indicado
+     */
+    public static void imprimirMenores(float promedio, Estudiante nodoActual, Arbol arbolBinario) {
+        if( nodoActual != null)
+        {
+            arbolBinario.recorrerEnOrden(nodoActual.getHijoIzquierdo());
+            System.out.println("El nombre es: " + nodoActual.getNombre() 
+            + " y el promedio corresponde a: " + nodoActual.getPromedio());
+            arbolBinario.recorrerEnOrden(nodoActual.getHijoDerecho());
+        }
+    }
+
+    /**
+     * Método que recibe un promedio e imprime los datos de los Estudiantes que tienen un promedio igual al
+     * indicado
+     */
+    public static void imprimirIguales(float promedio) {
+    }
+
+    /**
+     * Método recibe un promedio e imprime los datos de los Estudiantes que tienen un promedio mayor al
+     * indicado
+     */
+    public static void  imprimirMayores(float promedio) {
     }
 }
